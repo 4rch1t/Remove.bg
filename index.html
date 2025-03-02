@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKS remove.bg</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo" />
+    </div>
+    <nav class="nav">
+      <a href="#">Remove Background</a>
+      <div class="dropdown">
+        <button class="dropbtn">Features</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">For Business</button>
+      </div>
+      <a href="#">Pricing</a>
+    </nav>
+    <div class="profile">
+      <div class="profile-circle">AKS</div>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="container">
+      <h1>Remove Image Background</h1>
+      
+      <label for="fileInput" class="upload-btn">Upload Image</label>
+      <input type="file" id="fileInput" accept="image/*" hidden />
+      <button id="removeBtn">Remove Background</button>
+
+      <div class="output">
+        <h2>Result:</h2>
+        <div class="canvas-container">
+          <canvas id="canvas"></canvas>
+          <img id="resultImage" alt="Processed Image" />
+        </div>
+
+        <div class="brush-controls">
+          <button id="eraseBrush">Erase</button>
+          <button id="restoreBrush">Restore</button>
+          <input type="range" id="brushSize" min="5" max="50" value="20">
+        </div>
+
+        <a id="downloadLink" class="hidden" download="background_removed.png">Download Image</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
